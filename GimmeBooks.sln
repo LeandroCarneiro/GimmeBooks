@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Api", "GimmeBooks\GimmeBooks.Api\GimmeBooks.Api.csproj", "{7B678E7D-AA25-4BC0-8FBC-8566EF993CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Api", "GimmeBooks\GimmeBooks.Api\GimmeBooks.Api.csproj", "{7B678E7D-AA25-4BC0-8FBC-8566EF993CC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Domain", "GimmeBooks\GimmeBooks.Domain\GimmeBooks.Domain.csproj", "{52FFA1BD-7644-4985-AE89-415C27F53F2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Domain", "GimmeBooks\GimmeBooks.Domain\GimmeBooks.Domain.csproj", "{52FFA1BD-7644-4985-AE89-415C27F53F2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Application", "GimmeBooks\GimmeBooks.Application\GimmeBooks.Application.csproj", "{195D0CC9-E74D-4650-B833-4E14E9179840}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Application", "GimmeBooks\GimmeBooks.Application\GimmeBooks.Application.csproj", "{195D0CC9-E74D-4650-B833-4E14E9179840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Bootstrap", "GimmeBooks\GimmeBooks.Bootstrap\GimmeBooks.Bootstrap.csproj", "{51514F9D-861D-476F-A884-9E55B399F096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Bootstrap", "GimmeBooks\GimmeBooks.Bootstrap\GimmeBooks.Bootstrap.csproj", "{51514F9D-861D-476F-A884-9E55B399F096}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Business", "GimmeBooks\GimmeBooks.Business\GimmeBooks.Business.csproj", "{C79A3D12-AB5A-48BF-9137-35799339636C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Business", "GimmeBooks\GimmeBooks.Business\GimmeBooks.Business.csproj", "{C79A3D12-AB5A-48BF-9137-35799339636C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Common", "GimmeBooks\GimmeBooks.Common\GimmeBooks.Common.csproj", "{3430CA28-A3D0-4605-9A07-9B5BF52F9094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Common", "GimmeBooks\GimmeBooks.Common\GimmeBooks.Common.csproj", "{3430CA28-A3D0-4605-9A07-9B5BF52F9094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Data", "GimmeBooks\GimmeBooks.Data\GimmeBooks.Data.csproj", "{958F5584-6222-4B21-9F31-465CEE7AFF8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Data", "GimmeBooks\GimmeBooks.Data\GimmeBooks.Data.csproj", "{958F5584-6222-4B21-9F31-465CEE7AFF8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.DI", "GimmeBooks\GimmeBooks.DI\GimmeBooks.DI.csproj", "{6863520E-D1C5-4484-B5B2-C74A7E6F017C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.DI", "GimmeBooks\GimmeBooks.DI\GimmeBooks.DI.csproj", "{6863520E-D1C5-4484-B5B2-C74A7E6F017C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Mapping", "GimmeBooks\GimmeBooks.Mapping\GimmeBooks.Mapping.csproj", "{D63E8C4F-6F1B-4678-9670-211BDAF7A379}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Mapping", "GimmeBooks\GimmeBooks.Mapping\GimmeBooks.Mapping.csproj", "{D63E8C4F-6F1B-4678-9670-211BDAF7A379}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.ViewModels", "GimmeBooks\GimmeBooks.ViewModels\GimmeBooks.ViewModels.csproj", "{8F98C71B-59AE-4197-A649-FC1E4CE0B48C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.ViewModels", "GimmeBooks\GimmeBooks.ViewModels\GimmeBooks.ViewModels.csproj", "{8F98C71B-59AE-4197-A649-FC1E4CE0B48C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{756121B5-81F5-4016-8C2F-E7ED083CC43F}"
 EndProject
@@ -29,9 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{F350F53A-DEA5-4EA3-9672-4B1E35E8D803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.NYNews", "GimmeBooks\GimmeBooks.NYNews\GimmeBooks.NYNews.csproj", "{08D0B80B-6E9C-488D-9868-1652F9AC260E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.NYNews", "GimmeBooks\GimmeBooks.NYNews\GimmeBooks.NYNews.csproj", "{08D0B80B-6E9C-488D-9868-1652F9AC260E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.GoogleBooks", "GimmeBooks\GimmeBooks.GoogleBooks\GimmeBooks.GoogleBooks.csproj", "{29AC00D8-201D-4B57-B27B-FD8073E8A780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.GoogleBooks", "GimmeBooks\GimmeBooks.GoogleBooks\GimmeBooks.GoogleBooks.csproj", "{29AC00D8-201D-4B57-B27B-FD8073E8A780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{446A10EC-B416-4102-A67B-601B181A2F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFullHelper", "RestFullHelper\RestFullHelper.csproj", "{A98E4809-3686-45F0-AF7D-5A6566EC4E73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,10 @@ Global
 		{29AC00D8-201D-4B57-B27B-FD8073E8A780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29AC00D8-201D-4B57-B27B-FD8073E8A780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29AC00D8-201D-4B57-B27B-FD8073E8A780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +110,7 @@ Global
 		{F350F53A-DEA5-4EA3-9672-4B1E35E8D803} = {756121B5-81F5-4016-8C2F-E7ED083CC43F}
 		{08D0B80B-6E9C-488D-9868-1652F9AC260E} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
 		{29AC00D8-201D-4B57-B27B-FD8073E8A780} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
+		{A98E4809-3686-45F0-AF7D-5A6566EC4E73} = {446A10EC-B416-4102-A67B-601B181A2F86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21463227-8BC6-4529-B52F-97BC01BB4F38}
