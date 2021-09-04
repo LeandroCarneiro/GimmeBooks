@@ -29,9 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{F350F53A-DEA5-4EA3-9672-4B1E35E8D803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.NYNews", "GimmeBooks.NYNews\GimmeBooks.NYNews.csproj", "{08D0B80B-6E9C-488D-9868-1652F9AC260E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.NYNews", "GimmeBooks\GimmeBooks.NYNews\GimmeBooks.NYNews.csproj", "{08D0B80B-6E9C-488D-9868-1652F9AC260E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.GoogleBooks", "GimmeBooks.GoogleBooks\GimmeBooks.GoogleBooks.csproj", "{29AC00D8-201D-4B57-B27B-FD8073E8A780}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.GoogleBooks", "GimmeBooks\GimmeBooks.GoogleBooks\GimmeBooks.GoogleBooks.csproj", "{29AC00D8-201D-4B57-B27B-FD8073E8A780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
