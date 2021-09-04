@@ -9,7 +9,7 @@ namespace RestFullHelper
 {
     public class ApiClient
     {
-        public Config _config;
+        private readonly Config _config;
 
         public ApiClient(Config config)
         {
