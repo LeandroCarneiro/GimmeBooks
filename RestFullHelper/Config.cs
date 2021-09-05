@@ -10,7 +10,7 @@
             Uri = uri;
         }
 
-        public Config(string url, string apikeyQueryName, string apiKey)
+        public Config(string url, string apikeyQueryName, string apiKey, string secret)
         {
             Uri = url + $"?{apikeyQueryName}={apiKey}";
             _apiKey = apiKey;

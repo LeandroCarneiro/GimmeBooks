@@ -1,11 +1,9 @@
-﻿using GimmeBooks.Application.Interfaces;
+﻿using GimmeBooks.Application.Interfaces.Business;
 using GimmeBooks.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace GimmeBooks.Business.Domain
 {
-    public class NewsBusiness : AppBusiness<News>, INewsBusiness
+    public class NewsBusiness : AppBusiness<News>, INewBusiness
     {
         public void DisableVersion(long surveyId, int version)
         {

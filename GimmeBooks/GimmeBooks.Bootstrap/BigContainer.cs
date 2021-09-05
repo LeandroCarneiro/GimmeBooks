@@ -1,5 +1,5 @@
 ﻿using GimmeBooks.Application.AppServices;
-using GimmeBooks.Application.Interfaces;
+using GimmeBooks.Application.Interfaces.Business;
 using GimmeBooks.Business.Domain;
 using GimmeBooks.Data.Contexts;
 using GimmeBooks.Domain.Interfaces;
@@ -17,7 +17,7 @@ namespace GimmeBooks.Bootstrap
 
         public static IServiceCollection RegisterAppBusiness(this IServiceCollection service)
         {
-            service.AddTransient<INewsBusiness, NewsBusiness>();
+            service.AddTransient<INewBusiness, NewsBusiness>();
             return service;
         }
 

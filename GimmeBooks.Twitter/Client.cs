@@ -1,4 +1,6 @@
-﻿using GimmeBooks.Common;
+﻿using GimmeBooks.Application.Interfaces;
+using GimmeBooks.Application.Interfaces.Services;
+using GimmeBooks.Common;
 using GimmeBooks.ViewModels.AppObject;
 using LinqToTwitter;
 using LinqToTwitter.Common;
@@ -10,33 +12,19 @@ using System.Threading.Tasks;
 
 namespace GimmeBooks.Twitter
 {
-    public class Client
+    public class Client : ITweetSeacher
     {
         private readonly TwitterContext _twitterCtx;
 
         public Client(IConfiguration config)
         {
             var settings = config.GetValue<ApiSettings>("TwitterApi");
-            var auth = Authorization(settings.Key, settings.Secret);
+            var auth = Setup.Authorization(settings.Key, settings.Secret);
 
             _twitterCtx = new TwitterContext(auth);
         }
 
-        private IAuthorizer Authorization(string key, string secret)
-        {
-            var auth = new ApplicationOnlyAuthorizer()
-            {
-                CredentialStore = new InMemoryCredentialStore
-                {
-                    ConsumerKey = key,
-                    ConsumerSecret = secret
-                },
-            };
-
-            return auth;
-        }
-
-        public async Task<List<Tweet_vw>> DoSearchAsync(string searchTerm)
+       public async Task<List<Tweet_vw>> SearchAsync(string searchTerm)
         {
             Search? searchResponse =
                 await
