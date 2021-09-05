@@ -22,7 +22,7 @@ namespace GimmeBooks.Bootstrap
 
         private static void Migrate(IServiceCollection services)
         {
-            var dao = services.BuildServiceProvider().GetService<TeslaDbContext>();
+            var dao = services.BuildServiceProvider().GetService<AppDbContext>();
             dao.Database.EnsureCreated();
             //dao.Database.Migrate();
         }

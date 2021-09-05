@@ -2,8 +2,7 @@
 
 namespace GimmeBooks.Application.Interfaces
 {
-    public interface IUserBusiness : IBusiness<UserApp>
+    public interface INewsBusiness : IBusiness<News>
     {
-
     }
 }

@@ -11,22 +11,20 @@ namespace GimmeBooks.Bootstrap
     {
         public static IServiceCollection RegisterAppServices(this IServiceCollection service)
         {
-            service.AddTransient<SurveyAppService>();
-            service.AddTransient<UserAppService>();
+            service.AddTransient<NewsAppService>();
             return service;
         }
 
         public static IServiceCollection RegisterAppBusiness(this IServiceCollection service)
         {
-            service.AddTransient<ISurveyBusiness, SurveyBusiness>();
-            service.AddTransient<IUserBusiness, UserBusiness>();
+            service.AddTransient<INewsBusiness, NewsBusiness>();
             return service;
         }
 
         public static IServiceCollection RegisterAppPersistence(this IServiceCollection service)
         {
-            service.AddDbContext<TeslaDbContext>();
-            service.AddTransient<IDbContext, TeslaDbContext>();
+            service.AddDbContext<AppDbContext>();
+            service.AddTransient<IDbContext, AppDbContext>();
             return service;
         }
     }

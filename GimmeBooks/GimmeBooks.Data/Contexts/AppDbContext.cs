@@ -5,13 +5,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace GimmeBooks.Data.Contexts
 {
-    public class TeslaDbContext : BaseContext, IDbContext
+    public class AppDbContext : BaseContext, IDbContext
     {
-        public virtual DbSet<Survey> tblSurveis { get; set; }
-        public virtual DbSet<Question> tblQuestions { get; set; }
-        public virtual DbSet<Answer> tblAnswers { get; set; }
-        public virtual DbSet<UserApp> tblUsers { get; set; }
-        public virtual DbSet<SurveyVersion> tblSurveyVersions { get; set; }
+        public virtual DbSet<Book> tblBooks { get; set; }
+        public virtual DbSet<News> tblNews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

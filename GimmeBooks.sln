@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFullHelper", "RestFullHelper\RestFullHelper.csproj", "{A98E4809-3686-45F0-AF7D-5A6566EC4E73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Twitter", "GimmeBooks.Twitter\GimmeBooks.Twitter.csproj", "{6E29601B-D7EF-4079-8EE0-659C9E29F38F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A98E4809-3686-45F0-AF7D-5A6566EC4E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +117,7 @@ Global
 		{08D0B80B-6E9C-488D-9868-1652F9AC260E} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
 		{29AC00D8-201D-4B57-B27B-FD8073E8A780} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
 		{A98E4809-3686-45F0-AF7D-5A6566EC4E73} = {446A10EC-B416-4102-A67B-601B181A2F86}
+		{6E29601B-D7EF-4079-8EE0-659C9E29F38F} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21463227-8BC6-4529-B52F-97BC01BB4F38}

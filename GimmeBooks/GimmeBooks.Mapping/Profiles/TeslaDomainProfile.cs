@@ -11,11 +11,7 @@ namespace GimmeBooks.Mapping.Profiles
         public TeslaDomainProfile()
         {
             CreateMap<EntityBase<long>, EntityBase_vw<long>>().ReverseMap();
-            CreateMap<UserApp, UserApp_vw>().ReverseMap();
-            CreateMap<SurveyVersion, SurveyVersion_vw>().ReverseMap();
-            CreateMap<Survey, Survey_vw>().ReverseMap();
-            CreateMap<Answer, Answer_vw>().ReverseMap();
-            CreateMap<Question, Question_vw>().ReverseMap();
+            CreateMap<News, News_vw>().ReverseMap();
         }
     }
 }
