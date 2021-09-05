@@ -15,7 +15,6 @@ namespace RestFullHelper
         {
             _config = config;
         }
-
         private HttpClient GetHttpClient(string url)
         {
             var client = new HttpClient { BaseAddress = new Uri(url) };
@@ -41,7 +40,6 @@ namespace RestFullHelper
                     throw new Exception("Invalid Request type");
             }
         }
-
         public async Task<T> SendAsync<T>(ObjRequest request)
         {
             try

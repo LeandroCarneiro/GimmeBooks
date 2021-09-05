@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RestFullHelper\RestFullHelper.csproj" />
     <ProjectReference Include="..\GimmeBooks.Application\GimmeBooks.Application.csproj" />
     <ProjectReference Include="..\GimmeBooks.NYNews\GimmeBooks.NYNews.csproj" />
+    <ProjectReference Include="..\RestFullHelper\RestFullHelper.csproj" />
   </ItemGroup>
 
 </Project>

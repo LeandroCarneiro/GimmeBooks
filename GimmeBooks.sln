@@ -35,9 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.GoogleBooks", "G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{446A10EC-B416-4102-A67B-601B181A2F86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFullHelper", "RestFullHelper\RestFullHelper.csproj", "{A98E4809-3686-45F0-AF7D-5A6566EC4E73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFullHelper", "GimmeBooks\RestFullHelper\RestFullHelper.csproj", "{A98E4809-3686-45F0-AF7D-5A6566EC4E73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Twitter", "GimmeBooks.Twitter\GimmeBooks.Twitter.csproj", "{6E29601B-D7EF-4079-8EE0-659C9E29F38F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Twitter", "GimmeBooks\GimmeBooks.Twitter\GimmeBooks.Twitter.csproj", "{6E29601B-D7EF-4079-8EE0-659C9E29F38F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

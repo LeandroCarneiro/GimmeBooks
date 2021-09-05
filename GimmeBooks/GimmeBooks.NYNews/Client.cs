@@ -1,7 +1,6 @@
 ﻿using GimmeBooks.Application.Interfaces.Services;
 using GimmeBooks.Common;
 using GimmeBooks.NYNews.Objs;
-using GimmeBooks.ViewModels.AppObject;
 using GimmeBooks.ViewModels.AppObjects;
 using Microsoft.Extensions.Configuration;
 using RestFullHelper;

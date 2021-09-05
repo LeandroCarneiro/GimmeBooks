@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GimmeBooks\GimmeBooks.Application\GimmeBooks.Application.csproj" />
-    <ProjectReference Include="..\GimmeBooks\GimmeBooks.Common\GimmeBooks.Common.csproj" />
-    <ProjectReference Include="..\GimmeBooks\GimmeBooks.ViewModels\GimmeBooks.ViewModels.csproj" />
+    <ProjectReference Include="..\GimmeBooks.Application\GimmeBooks.Application.csproj" />
+    <ProjectReference Include="..\GimmeBooks.Common\GimmeBooks.Common.csproj" />
+    <ProjectReference Include="..\GimmeBooks.ViewModels\GimmeBooks.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

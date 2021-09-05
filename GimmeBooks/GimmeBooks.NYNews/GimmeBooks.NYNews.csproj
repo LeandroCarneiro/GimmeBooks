@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RestFullHelper\RestFullHelper.csproj" />
     <ProjectReference Include="..\GimmeBooks.Application\GimmeBooks.Application.csproj" />
+    <ProjectReference Include="..\RestFullHelper\RestFullHelper.csproj" />
   </ItemGroup>
 
 </Project>
