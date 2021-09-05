@@ -18,34 +18,34 @@ namespace GimmeBooks.Twitter
 
         public Client(IConfiguration config)
         {
-            var settings = config.GetValue<ApiSettings>("TwitterApi");
-            var auth = Setup.Authorization(settings.Key, settings.Secret);
+            var settings = config.GetSection("TwitterApi").Get<ApiSettings>();
+            var auth = Setup.Authorization(settings);
 
             _twitterCtx = new TwitterContext(auth);
         }
 
-       public async Task<List<Tweet_vw>> SearchAsync(string searchTerm)
+        public async Task<List<Tweet_vw>> SearchAsync(string keywords)
         {
             Search? searchResponse =
                 await
                 _twitterCtx.Search.Where(
-                    x=>x.Query == searchTerm 
+                    x => x.Query == keywords
                     && x.Type == SearchType.Search
-                    &&   x.IncludeEntities == true 
-                    &&   x.TweetMode == TweetMode.Extended
+                    && x.IncludeEntities == true
+                    && x.TweetMode == TweetMode.Extended
                  )
                 .FirstOrDefaultAsync();
 
             var list = new List<Tweet_vw>();
 
             if (searchResponse?.Statuses != null)
-                
+
                 searchResponse.Statuses.ForEach(tweet =>
                     list.Add(new Tweet_vw()
-                            {
-                                User = tweet.User?.ScreenNameResponse,
-                                Text = tweet.Text ?? tweet.FullText
-                            }));
+                    {
+                        User = tweet.User?.ScreenNameResponse,
+                        Text = tweet.Text ?? tweet.FullText
+                    }));
 
             return list;
         }

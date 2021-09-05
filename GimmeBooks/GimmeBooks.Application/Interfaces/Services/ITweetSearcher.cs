@@ -6,6 +6,6 @@ namespace GimmeBooks.Application.Interfaces.Services
 {
     public interface ITweetSearcher
     {
-        Task<List<Tweet_vw>> SearchAsync(string searchTerm);
+        Task<List<Tweet_vw>> SearchAsync(string keywords);
     }
 }

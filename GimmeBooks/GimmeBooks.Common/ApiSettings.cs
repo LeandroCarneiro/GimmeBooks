@@ -7,5 +7,7 @@
         public string Url { get; set; }
         public string KeyQueryName { get; set; }
         public string SecretQueryName { get; set; }
+        public string TokenSecret { get; set; }
+        public string AccessToken { get; set; }
     }
 }

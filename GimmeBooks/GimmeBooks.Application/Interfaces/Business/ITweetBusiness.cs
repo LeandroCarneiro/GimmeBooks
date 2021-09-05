@@ -2,7 +2,7 @@
 
 namespace GimmeBooks.Application.Interfaces.Business
 {
-    public interface ITweetBusiness : IBusiness<Tweet>
+    public interface IBookBusiness : IBusiness<Book>
     {
     }
 }

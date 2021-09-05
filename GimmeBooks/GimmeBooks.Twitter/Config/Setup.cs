@@ -1,17 +1,20 @@
-﻿using LinqToTwitter.OAuth;
+﻿using GimmeBooks.Common;
+using LinqToTwitter.OAuth;
 
 namespace GimmeBooks.Twitter
 {
     public static class Setup
     {
-        public static IAuthorizer Authorization(string key, string secret)
+        public static IAuthorizer Authorization(ApiSettings settings)
         {
-            var auth = new ApplicationOnlyAuthorizer()
+            var auth = new SingleUserAuthorizer()
             {
-                CredentialStore = new InMemoryCredentialStore
+                CredentialStore = new SingleUserInMemoryCredentialStore
                 {
-                    ConsumerKey = key,
-                    ConsumerSecret = secret
+                    ConsumerKey = settings.Key,
+                    ConsumerSecret = settings.Secret,
+                    AccessTokenSecret = settings.TokenSecret,
+                    AccessToken = settings.AccessToken
                 },
             };
 

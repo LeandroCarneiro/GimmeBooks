@@ -14,6 +14,7 @@ namespace GimmeBooks.Bootstrap
         {
             service.AddTransient<NewsAppService>();
             service.AddTransient<BookAppService>();
+            service.AddTransient<TweetAppService>();
             return service;
         }
 
@@ -30,6 +31,7 @@ namespace GimmeBooks.Bootstrap
         {
             service.AddTransient<INewBusiness, NewsBusiness>();
             service.AddTransient<IBookBusiness, BookBusiness>();
+            service.AddTransient<ITweetBusiness, TweetBusiness>();
 
             return service;
         }
