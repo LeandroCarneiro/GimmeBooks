@@ -5,11 +5,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GimmeBooks.Api
 {
@@ -27,13 +22,6 @@ namespace GimmeBooks.Api
 
             services.AddCors();
 
-            //services.AddHsts(options =>
-            //{
-            //    options.Preload = true;
-            //    options.IncludeSubDomains = true;
-            //    options.MaxAge = TimeSpan.FromDays(60);
-            //});
-
             services.AddControllers();
             services.AddOpenApiDocument();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -43,9 +31,9 @@ namespace GimmeBooks.Api
 
             services.AddSwaggerDocument(document =>
             {
-                document.Title = "ESB Tesla API";
+                document.Title = "Gimme Books API";
                 document.DocumentName = "swagger";
-            }).AddOpenApiDocument(document => document.DocumentName = "Survey API");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,8 +49,6 @@ namespace GimmeBooks.Api
             });
             app.UseOpenApi();
             app.UseSwaggerUi3();
-
-            //app.UseHsts();            
         }
     }
 }

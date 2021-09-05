@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace GimmeBooks.Application.Interfaces.Services
 {
-    public interface ITweetSeacher
+    public interface ITweetSearcher
     {
         Task<List<Tweet_vw>> SearchAsync(string searchTerm);
     }

@@ -12,6 +12,9 @@
     <ProjectReference Include="..\GimmeBooks.Application\GimmeBooks.Application.csproj" />
     <ProjectReference Include="..\GimmeBooks.Business\GimmeBooks.Business.csproj" />
     <ProjectReference Include="..\GimmeBooks.Data\GimmeBooks.Data.csproj" />
+    <ProjectReference Include="..\GimmeBooks.GoogleBooks\GimmeBooks.GoogleBooks.csproj" />
+    <ProjectReference Include="..\GimmeBooks.NYNews\GimmeBooks.NYNews.csproj" />
+    <ProjectReference Include="..\GimmeBooks.Twitter\GimmeBooks.Twitter.csproj" />
   </ItemGroup>
 
 </Project>

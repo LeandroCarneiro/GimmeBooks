@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace GimmeBooks.Twitter
 {
-    public class Client : ITweetSeacher
+    public class Client : ITweetSearcher
     {
         private readonly TwitterContext _twitterCtx;
 

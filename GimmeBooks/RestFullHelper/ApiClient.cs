@@ -25,17 +25,17 @@ namespace RestFullHelper
         }
         private async Task<HttpResponseMessage> Fetch(HttpClient client, ObjRequest request)
         {
-            var msg = new HttpRequestMessage(new HttpMethod(request.Method), _config.Uri);
             switch (request.Type)
             {
                 case ERequestType.Get:
-                    return await client.GetAsync($"{_config.Uri}/{request.Method}?{request.Parameters}");
+                    var url = $"{_config.Url}/{request.Method}{_config.Permissions}{request.Parameters}";
+                    return await client.GetAsync(url);
                 case ERequestType.Post:
                     var objPost = new StringContent(JsonConvert.SerializeObject(request.Parameters));
-                    return await client.PostAsync($"{_config.Uri}/{request.Method}", objPost);
+                    return await client.PostAsync($"{_config.Url}/{request.Method}{_config.Permissions}", objPost);
                 case ERequestType.Put:
                     var objPut = new StringContent(JsonConvert.SerializeObject(request.Parameters));
-                    return await client.PutAsync($"{_config.Uri}/{request.Method}", objPut);
+                    return await client.PutAsync($"{_config.Url}/{request.Method}{_config.Permissions}", objPut);
                 default:
                     throw new Exception("Invalid Request type");
             }
@@ -44,7 +44,7 @@ namespace RestFullHelper
         {
             try
             {
-                using (var client = GetHttpClient(_config.Uri))
+                using (var client = GetHttpClient(_config.Url))
                 {
                     var response = await Fetch(client, request);
 

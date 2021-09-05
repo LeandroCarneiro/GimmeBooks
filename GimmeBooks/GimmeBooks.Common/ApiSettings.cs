@@ -6,5 +6,6 @@
         public string Secret { get; set; }
         public string Url { get; set; }
         public string KeyQueryName { get; set; }
+        public string SecretQueryName { get; set; }
     }
 }

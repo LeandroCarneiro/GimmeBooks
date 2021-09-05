@@ -16,7 +16,7 @@ namespace GimmeBooks.NYNews
 
         public Client(IConfiguration config)
         {
-            var settings = config.GetValue<ApiSettings>("NYApi");
+            var settings = config.GetSection("NYApi").Get<ApiSettings>();
            
             _client = new ApiClient(
                 new Config(
@@ -27,7 +27,7 @@ namespace GimmeBooks.NYNews
                     ));
         }
 
-        public async Task<List<News_vw>> SearchAsync(string categatory)
+        public async Task<List<News_vw>> SearchAsync(ECategoryType categatory)
         {
             var result = await _client.SendAsync<NYResult>(new ObjRequest()
             {
@@ -36,7 +36,7 @@ namespace GimmeBooks.NYNews
                 Type = ERequestType.Get
             });
 
-            if (result != null && result.Results != null && result.Results.Any() && result.Status == "Ok")
+            if (result != null && result.Results != null && result.Results.Any() && result.Status == "OK")
                 return result.Results.ToList();
 
             return default(List<News_vw>);

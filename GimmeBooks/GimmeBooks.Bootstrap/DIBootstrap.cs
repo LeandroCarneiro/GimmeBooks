@@ -12,6 +12,7 @@ namespace GimmeBooks.Bootstrap
         {
             service.RegisterAppServices()
                 .RegisterAppBusiness()
+                .RegisterServices()
                 .RegisterAppPersistence();
 
             AppContainer.SetContainer(service);

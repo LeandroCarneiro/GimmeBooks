@@ -1,7 +1,7 @@
 ﻿using GimmeBooks.Application.AppServices;
 using GimmeBooks.Common;
-using GimmeBooks.ViewModels.AppObjects;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace GimmeBooks.Api.Controllers
 {
@@ -15,9 +15,9 @@ namespace GimmeBooks.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get(ECategoryType category)
         {
-            return ReturnResult(_appService.FindById(1));
+            return ReturnResult(await _appService.GetAll(category));
         }
     }
 }

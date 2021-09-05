@@ -2,18 +2,29 @@
 {
     public class Config
     {
-        public readonly string Uri;
+        public readonly string Url;
         private readonly string _apiKey;
+        private readonly string _apiSecret;
+        public readonly string Permissions;
 
         public Config(string uri)
         {
-            Uri = uri;
+            Url = uri;
         }
 
-        public Config(string url, string apikeyQueryName, string apiKey, string secret)
+        public Config(string url, string apikeyQueryName="", string apiKey="", string apiSecretQueryName="", string secret="")
         {
-            Uri = url + $"?{apikeyQueryName}={apiKey}";
+            Url = url;
             _apiKey = apiKey;
+            _apiSecret = secret;
+
+            if(!(string.IsNullOrEmpty(apikeyQueryName) && string.IsNullOrEmpty(apiKey)))
+            {
+                Permissions = $"?{apikeyQueryName}={apiKey}";
+
+                if (!string.IsNullOrEmpty(apikeyQueryName) && !string.IsNullOrEmpty(secret))
+                    Permissions += $"&{apiSecretQueryName}={secret}";
+            }
         }
     }
 }
