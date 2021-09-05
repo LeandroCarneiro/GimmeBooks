@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+      <TargetFramework>net5.0</TargetFramework>
+	  <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Core" Version="3.0.27" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GimmeBooks\GimmeBooks.ViewModels\GimmeBooks.ViewModels.csproj" />
+    <ProjectReference Include="..\GimmeBooks\RestFullHelper\RestFullHelper.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

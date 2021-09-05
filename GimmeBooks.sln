@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.GoogleBooks", "G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{446A10EC-B416-4102-A67B-601B181A2F86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFullHelper", "GimmeBooks\RestFullHelper\RestFullHelper.csproj", "{A98E4809-3686-45F0-AF7D-5A6566EC4E73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestFullHelper", "GimmeBooks\RestFullHelper\RestFullHelper.csproj", "{A98E4809-3686-45F0-AF7D-5A6566EC4E73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Twitter", "GimmeBooks\GimmeBooks.Twitter\GimmeBooks.Twitter.csproj", "{6E29601B-D7EF-4079-8EE0-659C9E29F38F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Twitter", "GimmeBooks\GimmeBooks.Twitter\GimmeBooks.Twitter.csproj", "{6E29601B-D7EF-4079-8EE0-659C9E29F38F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Timer", "GimmeBooks.Timer\GimmeBooks.Timer.csproj", "{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E29601B-D7EF-4079-8EE0-659C9E29F38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{29AC00D8-201D-4B57-B27B-FD8073E8A780} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
 		{A98E4809-3686-45F0-AF7D-5A6566EC4E73} = {446A10EC-B416-4102-A67B-601B181A2F86}
 		{6E29601B-D7EF-4079-8EE0-659C9E29F38F} = {F350F53A-DEA5-4EA3-9672-4B1E35E8D803}
+		{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC} = {F3AF1B65-6903-4C7D-89EA-5CF83468305B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21463227-8BC6-4529-B52F-97BC01BB4F38}
