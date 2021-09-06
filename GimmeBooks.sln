@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestFullHelper", "GimmeBook
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GimmeBooks.Twitter", "GimmeBooks\GimmeBooks.Twitter\GimmeBooks.Twitter.csproj", "{6E29601B-D7EF-4079-8EE0-659C9E29F38F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Timer", "GimmeBooks.Timer\GimmeBooks.Timer.csproj", "{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GimmeBooks.Timer", "GimmeBooks\GimmeBooks.Timer\GimmeBooks.Timer.csproj", "{44E03CB2-EE4D-4B6E-98A1-FAE86DA387CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
