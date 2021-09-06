@@ -11,7 +11,7 @@ namespace GimmeBooks.Mapping
         {
             _config = new MapperConfiguration(cfg =>
             {
-                cfg.AddProfile(new TeslaDomainProfile());
+                cfg.AddProfile(new AppDomainProfile());
             });
         }
     }

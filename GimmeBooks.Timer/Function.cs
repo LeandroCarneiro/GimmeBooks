@@ -24,17 +24,17 @@ namespace GimmeBooks.Timer
             try
             {
                 log.LogInformation("running");
-                var jobUrl = "http://localhost:51150/gimmeBooks/api/BookReference";
+                var jobUrl = "http://localhost:51150/gimmeBooks/api/NewsAnalitics";
                 using (var httpClient = new HttpClient())
                 {
                     var url = @jobUrl;
                     httpClient.BaseAddress = new Uri(url);
                     httpClient.DefaultRequestHeaders.Accept.Clear();
                     httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                    await httpClient.GetAsync(url);
+                    log.LogInformation("Will post now");
+                    await httpClient.PostAsync(url, null);
+                    log.LogInformation("finished");
                 }
-                log.LogInformation("finished");
             }
             catch (Exception ex)
             {

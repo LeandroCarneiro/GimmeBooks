@@ -11,7 +11,7 @@ namespace GimmeBooks.Data.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(_configuration.GetConnectionString("GimmebooksDB"));
+            options.UseSqlServer(_configuration.GetConnectionString("AppDB"));
             base.OnConfiguring(options);
 
             options.UseLoggerFactory(_loggerFactory);

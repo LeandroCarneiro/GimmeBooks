@@ -3,7 +3,9 @@ using GimmeBooks.Application.Interfaces.Services;
 using GimmeBooks.Common;
 using GimmeBooks.Domain.Entities;
 using GimmeBooks.ViewModels.AppObject;
+using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace GimmeBooks.Application.AppServices
@@ -23,9 +25,24 @@ namespace GimmeBooks.Application.AppServices
             _tweetSearcher = tweetSearche;
         }
 
-        public async Task<ReadOnlyCollection<Book_vw>> Find(ECategoryType category, string keyWords)
+        public async Task<NewsAnalitics_vw> FindAndSave(ECategoryType category)
         {
-            return new ReadOnlyCollection<Book_vw>(await _bookSearcher.SearchAsync(category, keyWords));
+            var news = await _newsSearcher.SearchAsync(category);
+            var books = _bookSearcher.SearchAsync(category, news.FirstOrDefault().Title);
+            var tweets = _tweetSearcher.SearchAsync(news.FirstOrDefault().Title);
+
+            var result = new NewsAnalitics_vw()
+            {
+                NewsTitle = news.FirstOrDefault().Title,
+                RelatedTweetsCount = (await tweets).Count,
+                RelatedBooksCount = (await books).Count,
+                Date = DateTime.Now
+            };
+
+            var entity = Resolve(result);
+            _business.Add(entity);
+
+            return result;
         }
     }
 }

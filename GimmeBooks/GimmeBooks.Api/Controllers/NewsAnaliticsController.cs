@@ -1,4 +1,5 @@
 ﻿using GimmeBooks.Application.AppServices;
+using GimmeBooks.Common;
 using GimmeBooks.ViewModels.AppObject;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,40 +12,23 @@ namespace GimmeBooks.Api.Controllers
 {
     public class NewsAnaliticsController : BaseController
     {
-        private readonly BookAppService bookAppService;
-        private readonly NewsAppService newsAppService;
-        private readonly TweetAppService tweetAppService;
+        private readonly NewsAnaliticsAppService _newsAppService;
 
-        public NewsAnaliticsController(
-            BookAppService bookAppService,
-            NewsAppService newsAppService,
-            TweetAppService tweetAppService
-            )
+        public NewsAnaliticsController(NewsAnaliticsAppService newsAppService)
         {
-            this.bookAppService = bookAppService;
-            this.newsAppService = newsAppService;
-            this.tweetAppService = tweetAppService;
+            _newsAppService = newsAppService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(ECategoryType category = ECategoryType.Science)
+        {
+            return ReturnResult(await _newsAppService.FindAndSave(category));
         }
 
         [HttpGet]
-        public async Task<IActionResult> Post()
+        public async Task<IActionResult> Get()
         {
-            var news = await newsAppService.GetAll(Common.ECategoryType.World);
-            var books = bookAppService.Find(Common.ECategoryType.World, news.FirstOrDefault().Title);
-            var tweets = tweetAppService.Find(news.FirstOrDefault().Title);
-
-            return new ContentResult
-            {
-                Content = JsonConvert.SerializeObject(
-                    new NewsAnalitics_vw()
-                    {
-                        NewsTitle = news.FirstOrDefault().Title,
-                        RelatedTweetsCount = (await tweets).Count,
-                        RelatedBooksCount = (await books).Count,
-                        Date = DateTime.Now 
-                    }),
-                ContentType = "application/json"
-            };
+            return ReturnResult(await _newsAppService.AllAsync());
         }
     }
 }

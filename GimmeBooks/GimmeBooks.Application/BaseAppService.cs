@@ -2,8 +2,11 @@
 using GimmeBooks.Domain;
 using GimmeBooks.Mapping;
 using GimmeBooks.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace GimmeBooks.Application
 {
@@ -31,6 +34,11 @@ namespace GimmeBooks.Application
         public virtual T_vw FindById(long id)
         {
             return Resolve(_baseBusiness.SetIncluding.SingleOrDefault(x => x.Id == id));
+        }
+
+        public virtual async Task<IEnumerable<T_vw>> AllAsync()
+        {
+            return Resolve(await _baseBusiness.SetIncluding.ToListAsync());
         }
 
         #region resolver
