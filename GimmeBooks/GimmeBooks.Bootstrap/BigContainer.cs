@@ -13,7 +13,7 @@ namespace GimmeBooks.Bootstrap
     {
         public static IServiceCollection RegisterAppServices(this IServiceCollection service)
         {
-            //service.AddTransient<ILogger>();
+            service.AddTransient<NewsAnaliticsAppService>();
             service.AddTransient<NewsAppService>();
             service.AddTransient<BookAppService>();
             service.AddTransient<TweetAppService>();
@@ -33,6 +33,7 @@ namespace GimmeBooks.Bootstrap
         {
             service.AddTransient<INewBusiness, NewsBusiness>();
             service.AddTransient<IBookBusiness, BookBusiness>();
+            service.AddTransient<INewsAnaliticsBusiness, NewsAnaliticsBusiness>();
             service.AddTransient<ITweetBusiness, TweetBusiness>();
 
             return service;

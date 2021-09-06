@@ -24,7 +24,7 @@ namespace GimmeBooks.Timer
             try
             {
                 log.LogInformation("running");
-                var jobUrl = _settings.Url;
+                var jobUrl = "http://localhost:51150/gimmeBooks/api/BookReference";
                 using (var httpClient = new HttpClient())
                 {
                     var url = @jobUrl;

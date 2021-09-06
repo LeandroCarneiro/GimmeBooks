@@ -7,12 +7,11 @@ namespace GimmeBooks.Data.Contexts
 {
     public class AppDbContext : BaseContext, IDbContext
     {
-        public virtual DbSet<Book> tblBooks { get; set; }
-        public virtual DbSet<News> tblNews { get; set; }
+        public virtual DbSet<NewsAnalitics> tblNewsAnalitics { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(_configuration.GetConnectionString("TeslaDB"));
+            options.UseSqlServer(_configuration.GetConnectionString("GimmebooksDB"));
             base.OnConfiguring(options);
 
             options.UseLoggerFactory(_loggerFactory);

@@ -1,19 +1,21 @@
 ﻿using GimmeBooks.Application.AppServices;
+using GimmeBooks.ViewModels.AppObject;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace GimmeBooks.Api.Controllers
 {
-    public class BookReferenceController : BaseController
+    public class NewsAnaliticsController : BaseController
     {
         private readonly BookAppService bookAppService;
         private readonly NewsAppService newsAppService;
         private readonly TweetAppService tweetAppService;
 
-        public BookReferenceController(
+        public NewsAnaliticsController(
             BookAppService bookAppService,
             NewsAppService newsAppService,
             TweetAppService tweetAppService
@@ -25,7 +27,7 @@ namespace GimmeBooks.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Post()
         {
             var news = await newsAppService.GetAll(Common.ECategoryType.World);
             var books = bookAppService.Find(Common.ECategoryType.World, news.FirstOrDefault().Title);
@@ -34,11 +36,12 @@ namespace GimmeBooks.Api.Controllers
             return new ContentResult
             {
                 Content = JsonConvert.SerializeObject(
-                    new
+                    new NewsAnalitics_vw()
                     {
-                        news = news.FirstOrDefault(),
-                        tweetsCount = (await tweets).Count,
-                        books = await books
+                        NewsTitle = news.FirstOrDefault().Title,
+                        RelatedTweetsCount = (await tweets).Count,
+                        RelatedBooksCount = (await books).Count,
+                        Date = DateTime.Now 
                     }),
                 ContentType = "application/json"
             };
