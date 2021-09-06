@@ -5,6 +5,7 @@ using GimmeBooks.Business.Domain;
 using GimmeBooks.Data.Contexts;
 using GimmeBooks.Domain.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace GimmeBooks.Bootstrap
 {
@@ -12,6 +13,7 @@ namespace GimmeBooks.Bootstrap
     {
         public static IServiceCollection RegisterAppServices(this IServiceCollection service)
         {
+            //service.AddTransient<ILogger>();
             service.AddTransient<NewsAppService>();
             service.AddTransient<BookAppService>();
             service.AddTransient<TweetAppService>();
