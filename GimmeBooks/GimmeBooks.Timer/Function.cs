@@ -4,18 +4,15 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace GimmeBooks.Timer
 {
     public class Function
     {
         private readonly HttpClient _client;
-        private readonly GimmeBooksApi _settings;
-        public Function(HttpClient httpClient, IOptions<GimmeBooksApi> options)
+        public Function(HttpClient httpClient)
         {
             this._client = httpClient;
-            _settings = options.Value;
         }
 
         [FunctionName("Function")]

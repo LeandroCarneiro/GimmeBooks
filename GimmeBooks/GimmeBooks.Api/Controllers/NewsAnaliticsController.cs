@@ -1,11 +1,6 @@
 ﻿using GimmeBooks.Application.AppServices;
 using GimmeBooks.Common;
-using GimmeBooks.ViewModels.AppObject;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace GimmeBooks.Api.Controllers
