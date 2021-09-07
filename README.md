@@ -10,11 +10,13 @@ DDD Structure:
 - Domain
 - Common
 - Business
+
   --Presentation layer
     - API
     - TimeTrigger
     - Application
     - ViewModels
+    
   --Infra
     -- External
       - GoogleBooks
