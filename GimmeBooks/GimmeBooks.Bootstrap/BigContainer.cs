@@ -46,5 +46,13 @@ namespace GimmeBooks.Bootstrap
 
             return service;
         }
+
+        public static IServiceCollection RegisterAppPersistenceTest(this IServiceCollection service)
+        {
+            service.AddDbContext<AppDbContext>();
+            service.AddTransient<IDbContext, AppDbContext>();
+
+            return service;
+        }
     }
 }

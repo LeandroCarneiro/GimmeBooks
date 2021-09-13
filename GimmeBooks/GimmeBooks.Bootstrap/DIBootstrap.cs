@@ -20,6 +20,17 @@ namespace GimmeBooks.Bootstrap
 
             Migrate(service);
         }
+        
+        public static void RegisterTypesTest(IServiceCollection service)
+        {
+            service.RegisterAppServices()
+                .RegisterAppBusiness()
+                .RegisterServices()
+                .RegisterAppPersistenceTest();
+
+            AppContainer.SetContainer(service);
+            AutoMapperConfiguration.Register();
+        }
 
         private static void Migrate(IServiceCollection services)
         {

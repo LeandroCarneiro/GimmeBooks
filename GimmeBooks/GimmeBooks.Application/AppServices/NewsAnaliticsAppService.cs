@@ -4,7 +4,6 @@ using GimmeBooks.Common;
 using GimmeBooks.Domain.Entities;
 using GimmeBooks.ViewModels.AppObject;
 using System;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
