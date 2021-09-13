@@ -5,6 +5,7 @@ using GimmeBooks.ApplicationTests.Mocks;
 using GimmeBooks.Common;
 using Moq;
 using NUnit.Framework;
+using System;
 using System.Threading.Tasks;
 
 namespace GimmeBooks.Application.AppServices.Tests
@@ -22,11 +23,11 @@ namespace GimmeBooks.Application.AppServices.Tests
         public NewsAnaliticsAppServiceTests() : base()
         {
             _bookSearcher.Setup(x => (x.SearchAsync(It.IsAny<ECategoryType>(), It.IsAny<string>()).Result))
-                .Returns(MockFaker.BooksMock);
+                .Returns(MockFaker.BooksMock).Verifiable();
             _tweetSearcher.Setup(x => (x.SearchAsync(It.IsAny<string>()).Result))
-                .Returns(MockFaker.TweetsMock);
+                .Returns(MockFaker.TweetsMock).Verifiable();
             _newsSearcher.Setup(x => (x.SearchAsync(It.IsAny<ECategoryType>()).Result))
-                .Returns(MockFaker.NewsMock);
+                .Returns(MockFaker.NewsMock).Verifiable();
 
             _service = new NewsAnaliticsAppService(_business.Object, _bookSearcher.Object, _tweetSearcher.Object, _newsSearcher.Object);
         }
@@ -42,6 +43,14 @@ namespace GimmeBooks.Application.AppServices.Tests
 
             Assert.IsTrue(result.RelatedBooksCount > 0);
             Assert.IsTrue(result.RelatedTweetsCount > 0);
+            Assert.IsTrue(result.RelatedTweetsCount == 0);
+        }
+
+        [TestCase(10)]
+        public void FindAndSaveFailTest(ECategoryType type)
+        {
+            var result = Enum.IsDefined(typeof(ECategoryType), type);
+            Assert.IsFalse(result);
         }
     }
 }
