@@ -43,7 +43,6 @@ namespace GimmeBooks.Application.AppServices.Tests
 
             Assert.IsTrue(result.RelatedBooksCount > 0);
             Assert.IsTrue(result.RelatedTweetsCount > 0);
-            Assert.IsTrue(result.RelatedTweetsCount == 0);
         }
 
         [TestCase(10)]
