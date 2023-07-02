@@ -1,5 +1,25 @@
 {
+  "name": "gimmebooks",
+  "version": "1.0.0",
+  "description": "Testing GimmeBooks API",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeandroCarneiro/GimmeBooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeandroCarneiro/GimmeBooks/issues"
+  },
+  "homepage": "https://github.com/LeandroCarneiro/GimmeBooks#readme",
   "devDependencies": {
-    "cypress": "^12.16.0"
+    "@types/cypress": "^1.1.3",
+    "cypress": "^12.16.0",
+    "typescript": "^5.1.6"
   }
 }
