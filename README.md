@@ -27,4 +27,15 @@ DDD Structure:
     - DI
     - Mapper
     
- 
+ #Cypress
+
+To test an API using Cypress, you can follow these steps:
+
+Install Cypress: Cypress is a JavaScript-based end-to-end testing framework. You can install it using the Node Package Manager (NPM). Here's an example of how to install Cypress globally:
+
+ npm install -g cypress
+
+
+Create a new Cypress project: Once Cypress is installed, you can create a new Cypress project by running the following command in your project directory:
+  npx cypress open
+
