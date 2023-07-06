@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GimmeBooks.Application\GimmeBooks.Application.csproj" />
+    <ProjectReference Include="..\GimmeBooks.NYNews\GimmeBooks.NYNews.csproj" />
+    <ProjectReference Include="..\RestFullHelper\RestFullHelper.csproj" />
+  </ItemGroup>
+
+</Project>

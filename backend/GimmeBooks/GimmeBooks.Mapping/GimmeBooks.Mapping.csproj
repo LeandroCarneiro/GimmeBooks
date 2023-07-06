@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GimmeBooks.Domain\GimmeBooks.Domain.csproj" />
+    <ProjectReference Include="..\GimmeBooks.ViewModels\GimmeBooks.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
