@@ -3,11 +3,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { BoxofficeComponent } from './boxoffice.component';
+import { BooksComponent } from './books.component';
 
 describe('BoxofficeComponent', () => {
-  let component: BoxofficeComponent;
-  let fixture: ComponentFixture<BoxofficeComponent>;
+  let component: BooksComponent;
+  let fixture: ComponentFixture<BooksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -18,13 +18,13 @@ describe('BoxofficeComponent', () => {
       providers: [
         FormBuilder,
       ],      
-      declarations: [ BoxofficeComponent ]
+      declarations: [ BooksComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BoxofficeComponent);
+    fixture = TestBed.createComponent(BooksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

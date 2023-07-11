@@ -1,0 +1,20 @@
+import { Item } from './item';
+
+export class Book {
+    public Id: string;
+    public Etag: string;
+    public SelfLink: string;
+    public Item: Item;
+
+    constructor(
+        id: string,
+        etag: string,
+        selfLink: string,
+        volumeInfo: Item
+    ) {
+        this.Id = id;
+        this.Etag = etag;
+        this.SelfLink = selfLink;
+        this.Item = volumeInfo;
+    }
+}

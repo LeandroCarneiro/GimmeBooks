@@ -8,8 +8,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent, },
   {
     path: 'books',
-    loadChildren: () => import('./modules/application/example-boxoffice/boxoffice.module')
-      .then(mod => mod.BoxofficeModule)
+    loadChildren: () => import('./modules/application/books/books.module')
+      .then(mod => mod.BooksModule)
   },
   {
     path: 'login',

@@ -1,11 +1,23 @@
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col">
-      <div class="d-flex">
+      <div class="form-group mb-2">
+        <label class="text-primary fw-bold mb-2" for="selectSongs">Category</label>
+        <select class="form-control text-primary fw-bold" id="selectSongs">
+          <option value="1">Science</option>
+          <option value="2">Home</option>
+          <option value="3">Arts</option>
+          <option value="4">Us</option>
+          <option value="5">World</option>
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group mb-2">
+        <label class="text-primary fw-bold mb-2" for="selectSongs">Keyword</label>
         <div class="d-flex me-auto">
-          <input type="text" class="form-control me-2" id="name" placeholder="movies ...">
-          <button type="button" class="btn nga-btn-boxoffice-primary btn-sm nga-btn-boxoffice"><i
-              class="fa fa-search"></i></button>
+          <input type="text" class="form-control me-2" id="name" placeholder="keyword ...">
+          <button type="button" class="btn nga-btn-boxoffice-primary btn-sm nga-btn-boxoffice" onclick="this.getItems()"><i class="fa fa-search"></i></button>
         </div>
       </div>
     </div>
@@ -15,21 +27,24 @@
       <table class="table table-hover table-striped table-bordered table-sm">
         <thead>
           <tr>
-            <th style="cursor: pointer" class="text-primary font-weight-bold text-center">Name<i class="ms-1 fas fa-long-arrow-alt-up filterEnabled"></i></th>
-            <th style="cursor: pointer" class="font-weight-bold text-center">Date<i class="ms-1 fas fas fa-arrows-alt-v filterEnabled"></i></th>
-            <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Worldwide<i class="ms-1 fas fa-long-arrow-alt-up"></i>
+            <th style="cursor: pointer" class="text-primary font-weight-bold text-center">Name<i
+                class="ms-1 fas fa-long-arrow-alt-up filterEnabled"></i></th>
+            <th style="cursor: pointer" class="font-weight-bold text-center">Date<i
+                class="ms-1 fas fas fa-arrows-alt-v filterEnabled"></i></th>
+            <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
+              Description<i class="ms-1 fas fa-long-arrow-alt-up"></i>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let item of items; let i=index;">
             <td class="text-primary font-weight-bold text-center">
-              <a style="cursor: pointer" style="cursor: pointer" (click)="onSelectItemTrailer(item)">{{ item.name}}</a>
+              <a style="cursor: pointer" style="cursor: pointer">{{ item.Title }}</a>
             </td>
             <td class="font-weight-bold text-center">
-              <a (click)="onSelectItemTrailer(item)">{{ item.releaseDate }}</a>
+              <a>{{ item.PublishedDate }}</a>
             </td>
             <td class="text-end d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              <a (click)="onSelectItemTrailer(item)">$ {{ item.worldwide | number }} </a>
+              <a>$ {{ item.Description }} </a>
             </td>
           </tr>
         </tbody>

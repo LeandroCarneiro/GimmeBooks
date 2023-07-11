@@ -1,6 +1,6 @@
 ﻿namespace GimmeBooks.ViewModels.AppObject
 {
-    public class VolumeInfo_vw
+    public class Item_vw
     {
         public string Title { get; set; }
         public string Subtitle { get; set; }

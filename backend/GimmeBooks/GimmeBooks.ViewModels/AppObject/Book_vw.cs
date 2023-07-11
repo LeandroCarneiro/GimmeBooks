@@ -5,6 +5,6 @@
         public new string Id { get; set; }
         public string Etag { get; set; }
         public string SelfLink { get; set; }
-        public VolumeInfo_vw VolumeInfo { get; set; }
+        public Item_vw Item { get; set; }
     }
 }

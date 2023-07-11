@@ -2,19 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 
-import { Item } from './items/item';
-import { ItemsService } from './items/items.service';
+import { Item } from '../../../components/models/items/item';
+import { ItemsService } from '../../../components/models/items/items.service';
 import { environment } from '../../../../environments/environment';
 
 // eslint-disable-next-line
 declare const bootstrap: any;
 
 @Component({
-  selector: 'app-boxoffice',
-  templateUrl: './boxoffice.component.html',
-  styleUrls: ['./boxoffice.component.css']
+  selector: 'app-books',
+  templateUrl: './books.component.html',
+  styleUrls: ['./books.component.css']
 })
-export class BoxofficeComponent implements OnInit {
+export class BooksComponent implements OnInit {
   itemsLoaded: boolean;
   items: Item[];
   player: string;
@@ -50,11 +50,10 @@ export class BoxofficeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getItems();
   }
 
-  getItems(): any {
-    const url = environment.urlMovies;
+  public getItems(category:number, keyword:string): any {
+    const url = environment.config.url + `Book?category=${category}&keywords=${keyword}`;
     this.itemsService.getItems(url)
       .subscribe(
         items => {
